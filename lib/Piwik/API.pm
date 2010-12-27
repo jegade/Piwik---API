@@ -241,7 +241,7 @@ sub get_user {
 sub assign_user {
 
     my ( $self, $username, $site_id, ) = @_;
-    $self->_request( 'UsersManager.setUserAccess', { userLogin => $username, idSite => $site_id, access => 'view'} );
+    $self->_request( 'UsersManager.setUserAccess', { userLogin => $username, idSites => [$site_id], access => 'view'} );
 
 }
 

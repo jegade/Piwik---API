@@ -48,11 +48,11 @@ Piwik::API - Use the piwik API
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -240,8 +240,8 @@ sub get_user {
 
 sub assign_user {
 
-    my ( $self, $username, $site_id ) = @_;
-    $self->_request( 'UsersManager.setUserAccess', { userLogin => $username, idSite => $site_id } );
+    my ( $self, $username, $site_id, ) = @_;
+    $self->_request( 'UsersManager.setUserAccess', { userLogin => $username, idSite => $site_id, access => 'view'} );
 
 }
 

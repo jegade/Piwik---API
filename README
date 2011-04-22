@@ -1,55 +1,99 @@
-Piwik-API
-
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+Piwik::API(3)         User Contributed Perl Documentation        Piwik::API(3)
 
 
-INSTALLATION
 
-To install this module, run the following commands:
+[1mNAME[0m
+       Piwik::API - Use the piwik API
 
-	perl Build.PL
-	./Build
-	./Build test
-	./Build install
+[1mVERSION[0m
+       Version 0.02
 
-SUPPORT AND DOCUMENTATION
+[1mSYNOPSIS[0m
+       Add/Delete and list users and sites from user piwik
 
-After installing, you can find documentation for this module with the
-perldoc command.
+       Perhaps a little code snippet.
 
-    perldoc Piwik::API
+           use Piwik::API;
 
-You can also look for information at:
+           my $foo = Piwik::API->new();
+           ...
 
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Piwik-API
+[1mSUBROUTINES/METHODS[0m
+   [1madd_site[0m
+           addSite
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Piwik-API
+   [1mdelete_site[0m
+           deleteSite
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Piwik-API
+   [1mlist_sites[0m
+           getAllSitesId
 
-    Search CPAN
-        http://search.cpan.org/dist/Piwik-API/
+   [1mget_site_code[0m
+           SitesManager.getJavascriptTag
+
+   [1mget_site[0m
+           SitesManager.getSiteFromId
+
+   [1madd_user[0m
+           addUser
+
+   [1mdelete_user[0m
+           deleteUser
+
+   [1mget_user[0m
+           UsersManager.getUser
+
+   [1massign_user[0m
+           setUserAccess
+
+[1mAUTHOR[0m
+       Jens Gassmann, "<jegade at cpan.org>"
+
+[1mBUGS[0m
+       Please report any bugs or feature requests to "bug-piwik-api at
+       rt.cpan.org", or through the web interface at
+       http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Piwik-API
+       <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Piwik-API>.  I will be
+       notified, and then you'll automatically be notified of progress on your
+       bug as I make changes.
+
+[1mSUPPORT[0m
+       You can find documentation for this module with the perldoc command.
+
+           perldoc Piwik::API
+
+       You can also look for information at:
+
+       ·   RT: CPAN's request tracker
+
+           http://rt.cpan.org/NoAuth/Bugs.html?Dist=Piwik-API
+           <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Piwik-API>
+
+       ·   AnnoCPAN: Annotated CPAN documentation
+
+           http://annocpan.org/dist/Piwik-API <http://annocpan.org/dist/Piwik-
+           API>
+
+       ·   CPAN Ratings
+
+           http://cpanratings.perl.org/d/Piwik-API
+           <http://cpanratings.perl.org/d/Piwik-API>
+
+       ·   Search CPAN
+
+           http://search.cpan.org/dist/Piwik-API/
+           <http://search.cpan.org/dist/Piwik-API/>
+
+[1mACKNOWLEDGEMENTS[0m
+[1mLICENSE AND COPYRIGHT[0m
+       Copyright 2010 Jens Gassmann.
+
+       This program is free software; you can redistribute it and/or modify it
+       under the terms of either: the GNU General Public License as published
+       by the Free Software Foundation; or the Artistic License.
+
+       See http://dev.perl.org/licenses/ for more information.
 
 
-LICENSE AND COPYRIGHT
 
-Copyright (C) 2010 Jens Gassmann
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
-
+perl v5.12.2                      2010-12-28                     Piwik::API(3)

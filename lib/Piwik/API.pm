@@ -29,7 +29,7 @@ has 'error_code' => (
 has 'client' => (
 
     is      => 'rw',
-    default => sub { Mojo::Agent->new },
+    default => sub { Mojo::UserAgent->new },
 
 );
 

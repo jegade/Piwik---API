@@ -1,7 +1,7 @@
 package Piwik::API;
 
 
-use Mojo::Client;
+use Mojo::UserAgent;
 use JSON;
 use Moose;
 
@@ -29,7 +29,7 @@ has 'error_code' => (
 has 'client' => (
 
     is      => 'rw',
-    default => sub { Mojo::Client->new },
+    default => sub { Mojo::Agent->new },
 
 );
 
